@@ -16,7 +16,7 @@ const devMode = NODE_ENV === "development";
 const prodMode = NODE_ENV === "production";
 
 const config: webpack.Configuration = {
-  entry: resolve(__dirname, "./src/index.ts"),
+  entry: resolve(__dirname, "./src/index.tsx"),
   mode: NODE_ENV,
 
   module: {
@@ -24,14 +24,11 @@ const config: webpack.Configuration = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: [
-          "babel-loader",
-          { loader: "ts-loader", options: { configFile: "tsconfig.json" } },
-        ],
+        use: ["babel-loader", "ts-loader"],
       },
 
       {
-        test: /\.js$/i,
+        test: /\.jsx?$/i,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
@@ -83,7 +80,7 @@ const config: webpack.Configuration = {
   },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
 
   output: {
@@ -97,8 +94,8 @@ const config: webpack.Configuration = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: resolve(__dirname, "./src/index.html"),
-      favicon: resolve(__dirname, "./src/images/favicon.svg"),
+      template: resolve(__dirname, "./public/index.html"),
+      favicon: resolve(__dirname, "./assets/images/favicon.svg"),
     }),
     new DotenvWebpackPlugin(),
   ],
@@ -130,7 +127,7 @@ if (prodMode) {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: resolve(__dirname, `./src/public`),
+          from: resolve(__dirname, `./public/robots.txt`),
           to: resolve(__dirname, "./dist"),
         },
       ],

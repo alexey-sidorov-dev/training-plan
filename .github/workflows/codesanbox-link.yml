@@ -1,13 +1,11 @@
-name: Add CodeSandbox link
+name: CodeSandbox Link
 
-on:
-  pull_request:
-    types: [opened, reopened]
+on: pull_request
 
 jobs:
   add-codesandbox-link-comment:
-    name: Add CodeSandbox link comment
-    runs-on: ubuntu-latest
+    name: Add CodeSandbox Link comment
+    runs-on: ubuntu-20.04
     steps:
       - uses: mshick/add-pr-comment@v1
         env:

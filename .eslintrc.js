@@ -6,9 +6,14 @@ module.exports = {
   },
   extends: [
     "airbnb-base",
+    "plugin:promise/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "plugin:jest/recommended",
     "plugin:jest/style",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -16,7 +21,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "jest"],
+  plugins: ["@typescript-eslint"],
   rules: {
     "import/no-unresolved": "off",
     "import/extensions": ["warn", "never"],
@@ -24,7 +29,13 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/webpack.*.{js,ts}", "**/*.test.{js,ts,jsx,tsx}"],
+        devDependencies: [
+          "**/webpack.*.{js,ts}",
+          "**/*.test.{js,ts,jsx,tsx}",
+          "**/*.setup.{js,ts,d.ts,jsx,tsx}",
+          "**/*.stories.{js,ts,jsx,tsx}",
+          "**/config/*.{ts,js}",
+        ],
       },
     ],
     "max-len": ["error", { ignoreComments: true, code: 120 }],
