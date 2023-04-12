@@ -14,6 +14,7 @@ module.exports = {
     "plugin:jest/style",
     "plugin:jest-dom/recommended",
     "plugin:testing-library/react",
+    "plugin:storybook/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -38,11 +39,22 @@ module.exports = {
         ],
       },
     ],
-    "max-len": ["error", { ignoreComments: true, code: 120 }],
+    "max-len": [
+      "error",
+      {
+        ignoreComments: true,
+        code: 120,
+      },
+    ],
     "no-console": "off",
     "no-alert": "off",
     "no-param-reassign": ["off"],
-    "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
+    "no-plusplus": [
+      "error",
+      {
+        allowForLoopAfterthoughts: true,
+      },
+    ],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": [
       "error",

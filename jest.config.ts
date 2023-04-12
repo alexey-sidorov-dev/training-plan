@@ -19,7 +19,7 @@ const config: Config = {
       "identity-obj-proxy",
   },
   preset: "ts-jest",
-  setupFilesAfterEnv: ["./test/jest.setup.ts"],
+  setupFilesAfterEnv: ["./test/jest.setup.ts", "jest-extended/all"],
   testEnvironment: "jsdom",
 };
 
