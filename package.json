@@ -38,7 +38,8 @@
     "dotenv": "^16.0.3",
     "minireset.css": "^0.0.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
@@ -70,7 +71,7 @@
     "@typescript-eslint/parser": "^5.58.0",
     "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
-    "core-js": "^3.30.0",
+    "core-js": "^3.30.1",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^5.0.0",
     "dotenv-webpack": "^8.0.1",
@@ -84,7 +85,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.11",
-    "eslint-plugin-testing-library": "^5.10.2",
+    "eslint-plugin-testing-library": "^5.10.3",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",

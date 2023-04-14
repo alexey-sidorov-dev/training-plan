@@ -1,7 +1,9 @@
 import { FC } from "react";
 
-export const Main: FC = () => (
-  <div id="main" className="main" data-testid="main">
-    Running App..
+const Main: FC = () => (
+  <div id="main" className="main" role="main">
+    План тренировок
   </div>
 );
+
+export default Main;
