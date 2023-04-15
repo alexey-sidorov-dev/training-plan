@@ -1,14 +1,11 @@
 import { FC } from "react";
-import Main from "./components/Main";
 import { ErrorBoundary } from "react-error-boundary";
-import Fallback from "./components/Fallback";
-
-const logError = (error: Error, info: { componentStack: string }) => {
-  console.log(error.message, info.componentStack);
-};
+import Main from "./components/Main";
+import Fallback from "./components/MainFallback";
+import logReactError from "./helpers/logReactError";
 
 const App: FC = () => (
-  <ErrorBoundary FallbackComponent={Fallback} onError={logError}>
+  <ErrorBoundary FallbackComponent={Fallback} onError={logReactError}>
     <Main></Main>
   </ErrorBoundary>
 );

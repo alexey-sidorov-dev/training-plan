@@ -5,6 +5,6 @@ describe("Main", () => {
   it("shoul render component", () => {
     render(<Main></Main>);
 
-    expect(screen.getByRole("main")).toBeInTheDocument();
+    expect(screen.getByTestId("main")).toBeInTheDocument();
   });
 });
